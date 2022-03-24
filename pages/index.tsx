@@ -4,81 +4,61 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
+    <div className="flex min-h-fit items-center justify-center">
+      <div className="container">
+        <div className="mx-2 rounded-lg bg-white p-5 shadow-lg md:p-20">
+          <div className="text-center">
+            <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+              Rx<span className="text-indigo-600">Genius</span>
+            </h2>
+            <h3 className="mt-10 text-xl md:text-3xl">Coming Soon</h3>
+            <p className="text-md mt-10 md:text-xl">
+              <a className="hover:underline" href="https://www.quicktoolz.com">
+                RxGenius,
+              </a>{' '}
+              know how much your drugs will cost before you get to the pharmacy.
             </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          </div>
+          <div className="mt-10 flex flex-wrap justify-center">
+            <div className="m-3">
+              <a
+                href="https://www.facebook.com/QuickToolz"
+                title="Quicktoolz On Facebook"
+                className="inline-flex items-center rounded border-2 border-blue-600 bg-white py-2 px-6 font-bold tracking-wide text-gray-800 shadow-md hover:border-blue-600 hover:bg-blue-600 hover:text-white md:w-32"
+              >
+                <span className="mx-auto">Facebook</span>
+              </a>
+            </div>
+            <div className="m-3">
+              <a
+                href="https://twitter.com/quicktoolz"
+                title="Quicktoolz On Twitter"
+                className="inline-flex items-center rounded border-2 border-blue-500 bg-white py-2 px-6 font-bold tracking-wide text-gray-800 shadow-md hover:border-blue-500 hover:bg-blue-500 hover:text-white md:w-32"
+              >
+                <span className="mx-auto">Twitter</span>
+              </a>
+            </div>
+            <div className="m-3">
+              <a
+                href="https://pinterest.com/quicktoolz/"
+                title="Quicktoolz On Pinterest"
+                className="inline-flex items-center rounded border-2 border-red-600 bg-white py-2 px-6 font-bold tracking-wide text-gray-800 shadow-md hover:border-red-600 hover:bg-red-600 hover:text-white md:w-32"
+              >
+                <span className="mx-auto">Pintrest</span>
+              </a>
+            </div>
+            <div className="m-3">
+              <a
+                href="https://www.reddit.com/user/quicktoolz/"
+                title="Quicktoolz On Facebook"
+                className="inline-flex items-center rounded border-2 border-orange-500 bg-white py-2 px-6 font-bold tracking-wide text-gray-800 shadow-md hover:border-orange-500 hover:bg-orange-500 hover:text-white md:w-32"
+              >
+                <span className="mx-auto">Reddit</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+      </div>
     </div>
   )
 }
