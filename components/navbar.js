@@ -4,7 +4,6 @@ import { Popover, Transition } from '@headlessui/react'
 import {
   BookmarkAltIcon,
   CalendarIcon,
-  ChartBarIcon,
   CursorClickIcon,
   MenuIcon,
   PhoneIcon,
@@ -12,48 +11,36 @@ import {
   RefreshIcon,
   ShieldCheckIcon,
   SupportIcon,
-  ViewGridIcon,
+  BriefcaseIcon,
   XIcon,
+  HeartIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const solutions = [
   {
-    name: 'Analytics',
+    name: 'Who We Serve',
+    description: 'Get a better understanding of who RxGenius can help.',
+    href: '#',
+    icon: HeartIcon,
+  },
+  {
+    name: 'Our Mission',
     description:
-      'Get a better understanding of where your traffic is coming from.',
+      'Learn more about how we plan to make healthcare more accessible.',
     href: '#',
-    icon: ChartBarIcon,
+    icon: BriefcaseIcon,
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
-    icon: CursorClickIcon,
-  },
-  {
-    name: 'Security',
-    description: "Your customers' data will be safe and secure.",
+    name: 'HIPAA Compliance',
+    description: 'How we protect your information.',
     href: '#',
     icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: ViewGridIcon,
-  },
-  {
-    name: 'Automations',
-    description:
-      'Build strategic funnels that will drive your customers to convert',
-    href: '#',
-    icon: RefreshIcon,
   },
 ]
 const callsToAction = [
   { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
+  { name: 'Contact Us', href: '#', icon: PhoneIcon },
 ]
 const resources = [
   {
@@ -129,7 +116,7 @@ export default function Example() {
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
-                    <span>Solutions</span>
+                    <span>About Us</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',
@@ -199,13 +186,19 @@ export default function Example() {
               href="#"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Pricing
+              My Pharmacies
             </a>
             <a
               href="#"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Docs
+              My Medication
+            </a>
+            <a
+              href="#"
+              className="text-base font-medium text-gray-500 hover:text-gray-900"
+            >
+              My Insurance
             </a>
 
             <Popover className="relative">
@@ -372,14 +365,14 @@ export default function Example() {
                   href="#"
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
-                  Pricing
+                  My Pharmacies
                 </a>
 
                 <a
                   href="#"
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
-                  Docs
+                  Ass
                 </a>
                 {resources.map((item) => (
                   <a

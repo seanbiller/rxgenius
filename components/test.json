@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Atorvastatin",
+    "dosage_form": "Tablet",
+    "strength": ["10mg", "20mg", "40mg", "80mg"]
+  },
+  {
+    "name": "Fluoxetine",
+    "dosage_form": "Tablet",
+    "strength": ["10mg"]
+  },
+  {
+    "name": "Fluoxetine",
+    "dosage_form": "Capsule",
+    "strength": ["10mg", "20mg", "40mg"]
+  },
+  {
+    "name": "Amphetamine Salts",
+    "dosage_form": "Tablet",
+    "strength": ["10mg", "20mg", "30mg"]
+  },
+  {
+    "name": "Amphetamine Salts",
+    "dosage_form": "Capsule",
+    "strength": ["10mg", "20mg", "30mg"]
+  }
+]
