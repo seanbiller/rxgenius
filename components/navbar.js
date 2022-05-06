@@ -372,7 +372,7 @@ export default function Example() {
                   href="#"
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
-                  Ass
+                  Find Preferred Pharmacies
                 </a>
                 {resources.map((item) => (
                   <a
