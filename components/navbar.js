@@ -1,104 +1,96 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
+import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  BookmarkAltIcon,
-  CalendarIcon,
-  CursorClickIcon,
-  MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  SupportIcon,
-  BriefcaseIcon,
-  XIcon,
+  AnnotationIcon,
+  BookOpenIcon,
+  ChatAlt2Icon,
+  ChatAltIcon,
+  CurrencyDollarIcon,
+  DocumentReportIcon,
+  HandIcon,
   HeartIcon,
+  InboxIcon,
+  MailIcon,
+  MenuIcon,
+  PencilAltIcon,
+  QuestionMarkCircleIcon,
+  ReplyIcon,
+  SearchCircleIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
+  TrashIcon,
+  UsersIcon,
+  XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import { NavLink } from './navigation/navLink'
+import { MobileNavLink } from './navigation/mobileNavLink'
 
-const solutions = [
+const pages = [
   {
-    name: 'Who We Serve',
-    description: 'Get a better understanding of who RxGenius can help.',
-    href: '#',
-    icon: HeartIcon,
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'Product',
+    href: '/product',
   },
   {
     name: 'Our Mission',
-    description:
-      'Learn more about how we plan to make healthcare more accessible.',
-    href: '#',
-    icon: BriefcaseIcon,
+    href: '/mission',
+  },
+]
+
+const morePages = [
+  {
+    name: 'Blog',
+    description: 'Keep up with our blog.',
+    href: '/comingSoon',
+    icon: BookOpenIcon,
   },
   {
     name: 'HIPAA Compliance',
-    description: 'How we protect your information.',
-    href: '#',
+    description: 'How we keep your information safe.',
+    href: '/comingSoon',
     icon: ShieldCheckIcon,
   },
-]
-const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Us', href: '#', icon: PhoneIcon },
-]
-const resources = [
   {
-    name: 'Help Center',
-    description:
-      'Get all of your questions answered in our forums or contact support.',
-    href: '#',
-    icon: SupportIcon,
+    name: 'Meet the Team',
+    description: 'Get to know our founders.',
+    href: '/team',
+    icon: HandIcon,
   },
   {
-    name: 'Guides',
-    description:
-      'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
-    icon: BookmarkAltIcon,
-  },
-  {
-    name: 'Events',
-    description:
-      'See what meet-ups and other events we might be planning near you.',
-    href: '#',
-    icon: CalendarIcon,
-  },
-  {
-    name: 'Security',
-    description: 'Understand how we take your privacy seriously.',
-    href: '#',
-    icon: ShieldCheckIcon,
+    name: 'Contact',
+    description: 'Get in touch with us.',
+    href: '/contact',
+    icon: MailIcon,
   },
 ]
-const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  {
-    id: 2,
-    name: 'How to use search engine optimization to drive traffic to your site',
-    href: '#',
-  },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
-]
+
+const mobileLinks = pages.concat(morePages)
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+const Navbar = () => {
   return (
-    <Popover className="relative bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+    <header>
+      <Popover className="relative bg-white">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <span className="sr-only">Workflow</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
-              />
-            </a>
+            <Link href="/">
+              <a>
+                <span className="sr-only">Workflow</span>
+                <img
+                  className="h-8 w-auto sm:h-10"
+                  src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
+                  alt=""
+                />
+              </a>
+            </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -107,99 +99,11 @@ export default function Example() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-            <Popover className="relative">
-              {({ open }) => (
-                <>
-                  <Popover.Button
-                    className={classNames(
-                      open ? 'text-gray-900' : 'text-gray-500',
-                      'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
-                    )}
-                  >
-                    <span>About Us</span>
-                    <ChevronDownIcon
-                      className={classNames(
-                        open ? 'text-gray-600' : 'text-gray-400',
-                        'ml-2 h-5 w-5 group-hover:text-gray-500'
-                      )}
-                      aria-hidden="true"
-                    />
-                  </Popover.Button>
-
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-200"
-                    enterFrom="opacity-0 translate-y-1"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1"
-                  >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
-                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          {solutions.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className="h-6 w-6 flex-shrink-0 text-indigo-600"
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                        <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                          {callsToAction.map((item) => (
-                            <div key={item.name} className="flow-root">
-                              <a
-                                href={item.href}
-                                className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
-                              >
-                                <item.icon
-                                  className="h-6 w-6 flex-shrink-0 text-gray-400"
-                                  aria-hidden="true"
-                                />
-                                <span className="ml-3">{item.name}</span>
-                              </a>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </Popover.Panel>
-                  </Transition>
-                </>
-              )}
-            </Popover>
-
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              My Pharmacies
-            </a>
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              My Medication
-            </a>
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              My Insurance
-            </a>
+            {pages.map((page) => (
+              <NavLink key={page.name} href={page.href}>
+                {page.name}
+              </NavLink>
+            ))}
 
             <Popover className="relative">
               {({ open }) => (
@@ -229,61 +133,29 @@ export default function Example() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
+                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform lg:left-1/2 lg:ml-0 lg:max-w-2xl lg:-translate-x-1/2">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          {resources.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className="h-6 w-6 flex-shrink-0 text-indigo-600"
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
+                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                          {morePages.map((item) => (
+                            <Link key={item.name} href={item.href}>
+                              <a className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
+                                  <item.icon
+                                    className="h-6 w-6"
+                                    aria-hidden="true"
+                                  />
+                                </div>
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-gray-900">
+                                    {item.name}
+                                  </p>
+                                  <p className="mt-1 text-sm text-gray-500">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </a>
+                            </Link>
                           ))}
-                        </div>
-                        <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
-                          <div>
-                            <h3 className="text-sm font-medium uppercase tracking-wide text-gray-500">
-                              Recent Posts
-                            </h3>
-                            <ul role="list" className="mt-4 space-y-4">
-                              {recentPosts.map((post) => (
-                                <li
-                                  key={post.id}
-                                  className="truncate text-base"
-                                >
-                                  <a
-                                    href={post.href}
-                                    className="font-medium text-gray-900 hover:text-gray-700"
-                                  >
-                                    {post.name}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div className="mt-5 text-sm">
-                            <a
-                              href="#"
-                              className="font-medium text-indigo-600 hover:text-indigo-500"
-                            >
-                              {' '}
-                              View all posts{' '}
-                              <span aria-hidden="true">&rarr;</span>
-                            </a>
-                          </div>
                         </div>
                       </div>
                     </Popover.Panel>
@@ -293,115 +165,67 @@ export default function Example() {
             </Popover>
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <a
-              href="#"
-              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Sign in
-            </a>
-            <a
-              href="#"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-            >
-              Sign up
-            </a>
+            <Link href="/contact">
+              <a className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">
+                Request A Demo
+              </a>
+            </Link>
           </div>
         </div>
-      </div>
 
-      <Transition
-        as={Fragment}
-        enter="duration-200 ease-out"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="duration-100 ease-in"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
-      >
-        <Popover.Panel
-          focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+        <Transition
+          as={Fragment}
+          enter="duration-200 ease-out"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="duration-100 ease-in"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-            <div className="px-5 pt-5 pb-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
-                  />
-                </div>
-                <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                    <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
+          <Popover.Panel
+            focus
+            className="absolute inset-x-0 top-0 z-30 origin-top-right transform p-2 transition md:hidden"
+          >
+            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+              <div className="px-5 pt-5 pb-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <img
+                      className="h-8 w-auto"
+                      src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
+                      alt="Workflow"
+                    />
+                  </div>
+                  <div className="-mr-2">
+                    <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                      <span className="sr-only">Close menu</span>
+                      <XIcon className="h-6 w-6" aria-hidden="true" />
+                    </Popover.Button>
+                  </div>
                 </div>
               </div>
-              <div className="mt-6">
-                <nav className="grid gap-y-8">
-                  {solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
-                    >
-                      <item.icon
-                        className="h-6 w-6 flex-shrink-0 text-indigo-600"
-                        aria-hidden="true"
-                      />
-                      <span className="ml-3 text-base font-medium text-gray-900">
-                        {item.name}
-                      </span>
-                    </a>
+              <div className="py-6 px-5">
+                <div className="grid grid-cols-2 gap-4">
+                  {mobileLinks.map((page) => (
+                    <MobileNavLink key={page.name} href={page.href}>
+                      {page.name}
+                    </MobileNavLink>
                   ))}
-                </nav>
+                </div>
+                <div className="mt-6">
+                  <Link href="/contact">
+                    <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">
+                      Request a Demo
+                    </a>
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className="space-y-6 py-6 px-5">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  My Pharmacies
-                </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Find Preferred Pharmacies
-                </a>
-                {resources.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-              <div>
-                <a
-                  href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                >
-                  Sign up
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{' '}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </Popover.Panel>
-      </Transition>
-    </Popover>
+          </Popover.Panel>
+        </Transition>
+      </Popover>
+    </header>
   )
 }
+
+export default Navbar

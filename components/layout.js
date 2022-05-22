@@ -1,11 +1,11 @@
-import Navbar from './navbar'
-import Footer from './footer'
+import Navbar from '../components/navbar'
+import Footer from '../components/footer'
 
 export default function Layout({ children }) {
   return (
-    <div className="container mx-auto ">
+    <div>
       <Navbar />
-      <main>{children}</main>
+      <>{children}</>
       <Footer />
     </div>
   )
