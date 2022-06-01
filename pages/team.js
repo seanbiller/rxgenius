@@ -1,30 +1,23 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+import Image from 'next/image'
+import SeanProfilePic from '../public/SeanProfilePic.png'
+import KimiProfilePic from '../public/KimiProfilePic.png'
+
 const people = [
   {
-    name: 'Emma Dorsey',
-    role: 'Senior Front-end Developer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
-    twitterUrl: '#',
-    linkedinUrl: '#',
+    name: 'Kimiya Monfared',
+    role: 'CoFounder',
+    imageUrl: KimiProfilePic,
+    bio: 'Kimiya currently works part-time in a local pharmacy and attends the University of Texas at Austin pursuing a Bachelor of Science. She cofounded RxGenius as an effort to solve a number of problems she observed during her four years in the pharmacy.',
+    linkedinUrl: 'https://www.linkedin.com/in/seanbiller/',
   },
-  // More people...
+
+  {
+    name: 'Sean Biller',
+    role: 'CoFounder',
+    imageUrl: SeanProfilePic,
+    bio: `I love to make new and interesting solutions to problems that shouldn't exist. Healthcare shouldn't be this hard and the cost of your prescriptions shouldn't be a mystery. Kimiya and I created this company so can make an educated choice next time you choose your insurance or before you decide which medication is right for you.`,
+    linkedinUrl: 'https://www.linkedin.com/in/kimiya-monfared-804466132/',
+  },
 ]
 
 export default function Team() {
@@ -37,9 +30,8 @@ export default function Team() {
               Our Team
             </h2>
             <p className="text-xl text-gray-500">
-              Nulla quam felis, enim faucibus proin velit, ornare id pretium.
-              Augue ultrices sed arcu condimentum vestibulum suspendisse.
-              Volutpat eu faucibus vivamus eget bibendum cras.
+              RxGenius was cofounded in 2022 by Kimiya Monfared and Sean Biller
+              in Austin, Texas.
             </p>
           </div>
           <div className="lg:col-span-2">
@@ -51,11 +43,13 @@ export default function Team() {
                 <li key={person.name}>
                   <div className="space-y-4">
                     <div className="aspect-w-3 aspect-h-2">
-                      <img
+                      <Image
                         className="rounded-lg object-cover shadow-lg"
                         src={person.imageUrl}
                         alt=""
-                      />
+                        width={500}
+                        height={500}
+                      ></Image>
                     </div>
                     <div className="space-y-1 text-lg font-medium leading-6">
                       <h3>{person.name}</h3>
@@ -66,22 +60,6 @@ export default function Team() {
                     </div>
 
                     <ul role="list" className="flex space-x-5">
-                      <li>
-                        <a
-                          href={person.twitterUrl}
-                          className="text-gray-400 hover:text-gray-500"
-                        >
-                          <span className="sr-only">Twitter</span>
-                          <svg
-                            className="h-5 w-5"
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                          </svg>
-                        </a>
-                      </li>
                       <li>
                         <a
                           href={person.linkedinUrl}

@@ -43,18 +43,18 @@ const pages = [
 ]
 
 const morePages = [
-  {
-    name: 'Blog',
-    description: 'Keep up with our blog.',
-    href: '/comingSoon',
-    icon: BookOpenIcon,
-  },
-  {
-    name: 'HIPAA Compliance',
-    description: 'How we keep your information safe.',
-    href: '/comingSoon',
-    icon: ShieldCheckIcon,
-  },
+  // {
+  //   name: 'Blog',
+  //   description: 'Keep up with our blog.',
+  //   href: '/comingSoon',
+  //   icon: BookOpenIcon,
+  // },
+  // {
+  //   name: 'HIPAA Compliance',
+  //   description: 'How we keep your information safe.',
+  //   href: '/comingSoon',
+  //   icon: ShieldCheckIcon,
+  // },
   {
     name: 'Meet the Team',
     description: 'Get to know our founders.',
@@ -83,10 +83,10 @@ const Navbar = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
               <a>
-                <span className="sr-only">Workflow</span>
+                <span className="sr-only">RxGenius</span>
                 <img
                   className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
+                  src="/RxGenius_Horizontal.png"
                   alt=""
                 />
               </a>

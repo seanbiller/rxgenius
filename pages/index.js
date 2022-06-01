@@ -93,28 +93,28 @@ const features = [
 const metrics = [
   {
     id: 1,
-    stat: '8K+',
-    emphasis: 'Companies',
-    rest: 'use laoreet amet lacus nibh integer quis.',
+    stat: '131M+',
+    emphasis: 'People',
+    rest: 'use prescription drugs in the United States.',
   },
   {
     id: 2,
-    stat: '25K+',
-    emphasis: 'Countries around the globe',
-    rest: 'lacus nibh integer quis.',
+    stat: '91.4%',
+    emphasis: 'Americans',
+    rest: 'have private, military, or federal insurance.',
   },
   {
     id: 3,
-    stat: '98%',
-    emphasis: 'Customer satisfaction',
-    rest: 'laoreet amet lacus nibh integer quis.',
+    stat: '18M+',
+    emphasis: 'Patients',
+    rest: 'struggle with affording their medication.',
   },
-  {
-    id: 4,
-    stat: '12M+',
-    emphasis: 'Issues resolved',
-    rest: 'lacus nibh integer quis.',
-  },
+  // {
+  //   id: 4,
+  //   stat: '12M+',
+  //   emphasis: 'Issues resolved',
+  //   rest: 'lacus nibh integer quis.',
+  // },
 ]
 
 function classNames(...classes) {
@@ -158,14 +158,15 @@ export default function Home() {
                   </div>
                   <div className="mt-6">
                     <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Stay on top of customer support
+                      Get personalized estimates{' '}
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare
-                      iaculis bibendum malesuada faucibus lacinia porttitor.
-                      Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                      arcu pretium pharetra at. Lectus viverra dui tellus ornare
-                      pharetra.
+                      RxGenius matches formulary information with your custom
+                      insurance benefits to provide a personalized estimate for
+                      the cost of your prescriptions. Our database contains
+                      popular insurance companies, including but not limited to:
+                      Blue Cross Blue Shield, Aetna, UnitedHealthcare, and
+                      Cigna.
                     </p>
                     <div className="mt-6">
                       <a
@@ -176,31 +177,6 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-                </div>
-                <div className="mt-8 border-t border-gray-200 pt-6">
-                  <blockquote>
-                    <div>
-                      <p className="text-base text-gray-500">
-                        &ldquo;Cras velit quis eros eget rhoncus lacus ultrices
-                        sed diam. Sit orci risus aenean curabitur donec aliquet.
-                        Mi venenatis in euismod ut.&rdquo;
-                      </p>
-                    </div>
-                    <footer className="mt-3">
-                      <div className="flex items-center space-x-3">
-                        <div className="flex-shrink-0">
-                          <img
-                            className="h-6 w-6 rounded-full"
-                            src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                            alt=""
-                          />
-                        </div>
-                        <div className="text-base font-medium text-gray-700">
-                          Marcia Hill, Digital Marketing Manager
-                        </div>
-                      </div>
-                    </footer>
-                  </blockquote>
                 </div>
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0">
@@ -228,14 +204,13 @@ export default function Home() {
                   </div>
                   <div className="mt-6">
                     <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Better understand your customers
+                      Select the best plan{' '}
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare
-                      iaculis bibendum malesuada faucibus lacinia porttitor.
-                      Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                      arcu pretium pharetra at. Lectus viverra dui tellus ornare
-                      pharetra.
+                      RxGenius allows you to select an insurance plan based on
+                      prescriptions vital to your health. Compare plans side by
+                      side to see the prices of your medication with different
+                      insurance plans.
                     </p>
                     <div className="mt-6">
                       <a
@@ -262,7 +237,7 @@ export default function Home() {
         </div>
 
         {/* Gradient Feature Section */}
-        <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
+        {/* <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
             <h2 className="text-3xl font-extrabold tracking-tight text-white">
               How RxGenius Can Help You
@@ -295,7 +270,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Stats section */}
         <div className="relative bg-gray-900">
@@ -325,11 +300,10 @@ export default function Home() {
                 RxGenius Market
               </p>
               <p className="mt-5 text-lg text-gray-300">
-                Rhoncus sagittis risus arcu erat lectus bibendum. Ut in
-                adipiscing quis in viverra tristique sem. Ornare feugiat viverra
-                eleifend fusce orci in quis amet. Sit in et vitae tortor, massa.
-                Dapibus laoreet amet lacus nibh integer quis. Eu vulputate diam
-                sit tellus quis at.
+                The prescription drug market is growing year after year. A total
+                of 6.3 billion prescriptions were dispensed in 2020 alone.
+                Millions of people are overpaying on their medications and
+                RxGenius is going to put a stop to that.
               </p>
               <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                 {metrics.map((item) => (

@@ -10,39 +10,32 @@ import {
 const transferFeatures = [
   {
     id: 1,
-    name: 'Competitive exchange rates',
+    name: 'Insurance Information',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'The first step to using our site is to enter your prescription insurance information found on your insurance card. This will allow our code to pull the insurance formulary and summary of benefits and coverage associated with your insurance plan. ',
     icon: GlobeAltIcon,
   },
   {
     id: 2,
-    name: 'No hidden fees',
+    name: 'Medication Selection',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Next, type in the prescription medication you want an estimate for. Be sure to select the correct strength, dosage form, and dosage route. Prices can vary with changes in these values, so be certain they match your prescription exactly. ',
     icon: ScaleIcon,
-  },
-  {
-    id: 3,
-    name: 'Transfers are instant',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
   },
 ]
 const communicationFeatures = [
   {
     id: 1,
-    name: 'Mobile notifications',
+    name: 'Pharmacy Matching',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'The final step in the RxGenius drug pricing process is to select the appropriate pharmacy. Preferred pharmacies vary depending on the insurance company and there is usually a selection of preferred participating pharmacies available to choose from.',
     icon: AnnotationIcon,
   },
   {
     id: 2,
-    name: 'Reminder emails',
+    name: 'Completely Free',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'RxGenius is committed to providing accessible healthcare for all, which is why our service is completely free to use. Our team works to help make a difference in the lives of our patients.',
     icon: MailIcon,
   },
 ]
@@ -87,24 +80,23 @@ export default function Example() {
 
         <div className="relative">
           <h2 className="text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-            A better way to send money
+            The Path to Accessible Healthcare{' '}
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-xl text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            magnam voluptatum cupiditate veritatis in, accusamus quisquam.
+            Our goal at RxGenius is to ensure that every patient has access to
+            the best healthcare tools available.
           </p>
         </div>
 
         <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
           <div className="relative">
             <h3 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
-              Individual Patients
+              How to Use{' '}
             </h3>
             <p className="mt-3 text-lg text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              minima sequi recusandae, porro maiores officia assumenda aliquam
-              laborum ab aliquid veritatis impedit odit adipisci optio iste
-              blanditiis facere. Totam, velit.
+              RxGenius values ease of benefit use and navigation. Ensuring our
+              patients can easily use our range of healthcare pricing tools is
+              imperative to our company mission.
             </p>
 
             <dl className="mt-10 space-y-10">
@@ -206,12 +198,10 @@ export default function Example() {
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
             <div className="lg:col-start-2">
               <h3 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
-                Healthcare Professionals
+                Finding the Best Price
               </h3>
               <p className="mt-3 text-lg text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                ex obcaecati natus eligendi delectus, cum deleniti sunt in
-                labore nihil quod quibusdam expedita nemo.
+                Just one more step and your done!
               </p>
 
               <dl className="mt-10 space-y-10">

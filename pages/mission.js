@@ -1,9 +1,13 @@
-/* This example requires Tailwind CSS v2.0+ */
+import Link from 'next/link'
+import Image from 'next/image'
+
+import HorizontalLogo from '../public/RxGenius_Horizontal.png'
+
 const stats = [
-  { label: 'Founded', value: '2021' },
-  { label: 'Employees', value: '5' },
-  { label: 'Beta Users', value: '521' },
-  { label: 'Raised', value: '$25M' },
+  { label: 'Founded', value: '2022' },
+  { label: 'Employees', value: '2' },
+  // { label: 'Beta Users', value: '521' },
+  // { label: 'Raised', value: '$25M' },
 ]
 
 export default function Mission() {
@@ -54,18 +58,14 @@ export default function Mission() {
             <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100"
+                src="/KimiProfilePic.png"
                 alt=""
               />
               <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-90" />
               <div className="relative px-8">
-                <div>
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/workcation.svg?color=white"
-                    alt="Workcation"
-                  />
+                <div className="h-12">
+                  {/* <Image src={HorizontalLogo} height={30} width={90} /> */}
                 </div>
                 <blockquote className="mt-8">
                   <div className="relative text-lg font-medium text-white md:flex-grow">
@@ -77,7 +77,11 @@ export default function Mission() {
                     >
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
-                    <p className="relative">Quote about healthcare system</p>
+                    <p className="relative">
+                      “After working in healthcare for years, I wanted to
+                      develop a solution to the predatory system insurance
+                      companies created”
+                    </p>
                   </div>
 
                   <footer className="mt-4">
@@ -95,7 +99,7 @@ export default function Mission() {
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-20">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              On a mission to empower patients and healthcare professionals
+              On a mission to empower patients{' '}
             </h2>
             <div className="mt-6 space-y-6 text-gray-500">
               <p className="text-lg">
@@ -105,9 +109,10 @@ export default function Mission() {
                 deserves the right to know how much their drugs cost before they
                 get to the pharmacy.
               </p>
-              <p className="text-base leading-7">How we help patients</p>
               <p className="text-base leading-7">
-                How we help healthcare professionals
+                By simply entering insurance information and the medication name
+                and dosage, patients receive a customized price estimate drawn
+                directly from their corresponding formulary and benefits data.{' '}
               </p>
             </div>
           </div>
@@ -130,11 +135,12 @@ export default function Mission() {
               ))}
             </dl>
             <div className="mt-10">
-              <a href="#" className="text-base font-medium text-indigo-600">
-                {' '}
-                Learn more about how we're changing the world{' '}
-                <span aria-hidden="true">&rarr;</span>{' '}
-              </a>
+              <Link href="/product" passHref>
+                <a className="text-base font-medium text-indigo-600">
+                  Learn more about how we're changing the world{' '}
+                  <span aria-hidden="true">&rarr;</span>{' '}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
