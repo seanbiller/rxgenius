@@ -34,7 +34,8 @@ const pages = [
   },
   {
     name: 'Product',
-    href: '/product',
+    // href: '/product',
+    href: '/comingSoon',
   },
   {
     name: 'Our Mission',

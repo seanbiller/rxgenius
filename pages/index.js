@@ -23,6 +23,10 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 import Hero from '../components/homePage/hero'
 import { NavLink } from '../components/navigation/navLink'
 import Link from 'next/link'
+import Image from 'next/image'
+
+import searchPic from '../public/search.jpg'
+import drugResults from '../public/DrugResults.jpg'
 
 const solutions = [
   {
@@ -131,11 +135,7 @@ export default function Home() {
 
         {/* Logo Cloud */}
         <div className="bg-gray-100">
-          <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm font-semibold uppercase tracking-wide text-gray-500">
-              Trusted by over 5 very average small businesses
-            </p>
-          </div>
+          <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8"></div>
         </div>
 
         {/* Alternating Feature Sections */}
@@ -180,11 +180,18 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0">
-                <div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                  <img
+                <div className="relative -mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                  {/* <img
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="/search.jpg"
+                    src="/Search.jpg"
                     alt="Inbox user interface"
+                  /> */}
+                  <Image
+                    src={searchPic}
+                    alt="Logo"
+                    layout="fill" // required
+                    objectFit="contain" // change as you like
+                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                   />
                 </div>
               </div>
@@ -225,10 +232,17 @@ export default function Home() {
               </div>
               <div className="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
                 <div className="-ml-48 pr-4 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                  <img
+                  {/* <img
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                     src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
                     alt="Customer profile user interface"
+                  /> */}
+                  <Image
+                    src={drugResults}
+                    alt="Logo"
+                    layout="fill" // required
+                    objectFit="contain" // change as you like
+                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                   />
                 </div>
               </div>
