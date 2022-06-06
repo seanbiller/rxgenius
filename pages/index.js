@@ -25,7 +25,7 @@ import { NavLink } from '../components/navigation/navLink'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import searchPic from '../public/search.jpg'
+import searchPic from '../public/Search.jpg'
 import drugResults from '../public/DrugResults.jpg'
 
 const solutions = [
