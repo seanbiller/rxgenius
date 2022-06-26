@@ -1,21 +1,21 @@
 const footerNavigation = {
   solutions: [
-    { name: 'Patients', href: '/product' },
-    { name: 'Healthcare Professionals', href: '/product' },
+    { name: 'Product', href: '/product' },
+    // { name: 'Healthcare Professionals', href: '/product' },
   ],
   company: [
-    { name: 'Mission', href: '#' },
+    { name: 'Mission', href: '/mission' },
     { name: 'Meet the Team', href: '/team' },
-    { name: 'Blog', href: '#' },
+    // { name: 'Blog', href: '#' },
   ],
   contact: [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Request A Demo', href: '/contact' },
   ],
-  legal: [
-    { name: 'HIPAA Compliance', href: '/hipaa' },
-    { name: 'Terms and Conditions', href: '/comingSoon' },
-  ],
+  // legal: [
+  //   { name: 'HIPAA Compliance', href: '/hipaa' },
+  //   { name: 'Terms and Conditions', href: '/comingSoon' },
+  // ],
   social: [
     {
       name: 'Facebook',
@@ -144,7 +144,7 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-12 md:mt-0">
+              {/* <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
                   Legal
                 </h3>
@@ -160,12 +160,12 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
-          <div className="flex space-x-6 md:order-2">
+          {/* <div className="flex space-x-6 md:order-2">
             {footerNavigation.social.map((item) => (
               <a
                 key={item.name}
@@ -176,7 +176,7 @@ export default function Footer() {
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}
-          </div>
+          </div> */}
           <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
             &copy; 2022 RxGenius, LLC. All rights reserved.
           </p>

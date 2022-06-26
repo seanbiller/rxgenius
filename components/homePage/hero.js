@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import heroPicture from '../../public/hero-picture.jpg'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -29,18 +30,16 @@ const Hero = () => {
             </p>
             <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
               <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-                <a
-                  href="#"
-                  className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-indigo-700 shadow-sm hover:bg-indigo-50 sm:px-8"
-                >
-                  Learn More
-                </a>
-                <a
-                  href="#"
-                  className="flex items-center justify-center rounded-md border border-transparent bg-indigo-500 bg-opacity-80 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-90 sm:px-8"
-                >
-                  Request a Demo
-                </a>
+                <Link href="/product">
+                  <a className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-indigo-700 shadow-sm hover:bg-indigo-50 sm:px-8">
+                    Learn More
+                  </a>
+                </Link>
+                <Link href="/contact">
+                  <a className="flex items-center justify-center rounded-md border border-transparent bg-indigo-500 bg-opacity-80 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-90 sm:px-8">
+                    Request a Demo
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

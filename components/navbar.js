@@ -86,7 +86,7 @@ const Navbar = () => {
                 <span className="sr-only">RxGenius</span>
                 <img
                   className="h-8 w-auto sm:h-10"
-                  src="/RxGenius_Horizontal.png"
+                  src="https://rxgenius-media.s3.amazonaws.com/Rx+Genius/RxGenius_Horizontal.png"
                   alt=""
                 />
               </a>
@@ -192,7 +192,7 @@ const Navbar = () => {
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
+                      src="https://rxgenius-media.s3.amazonaws.com/Rx+Genius/RxGenius_Horizontal.png"
                       alt="Workflow"
                     />
                   </div>

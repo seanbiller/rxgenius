@@ -1,22 +1,11 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  AnnotationIcon,
-  ChatAlt2Icon,
-  ChatAltIcon,
-  CurrencyDollarIcon,
-  DocumentReportIcon,
-  HeartIcon,
   InboxIcon,
-  MenuIcon,
-  PencilAltIcon,
-  QuestionMarkCircleIcon,
-  ReplyIcon,
-  SearchCircleIcon,
   SparklesIcon,
-  TrashIcon,
-  UsersIcon,
-  XIcon,
+  PresentationChartBarIcon,
+  CheckIcon,
+  LightBulbIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
@@ -28,72 +17,6 @@ import Image from 'next/image'
 import searchPic from '../public/Search.jpg'
 import drugResults from '../public/DrugResults.jpg'
 
-const solutions = [
-  {
-    name: 'Drug Pricing',
-    description:
-      'Learn how much your prescriptions will cost with your insurance before you step foot in the pharmacy.',
-    href: '#',
-    icon: CurrencyDollarIcon,
-  },
-  {
-    name: 'Insurance Comparison',
-    description:
-      'Find out which insurance plan will save you the most on your prescriptions.',
-    href: '#',
-    icon: SearchCircleIcon,
-  },
-]
-const features = [
-  {
-    name: 'Unlimited Inboxes',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: InboxIcon,
-  },
-  {
-    name: 'Manage Team Members',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: UsersIcon,
-  },
-  {
-    name: 'Spam Report',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: TrashIcon,
-  },
-  {
-    name: 'Compose in Markdown',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: PencilAltIcon,
-  },
-  {
-    name: 'Team Reporting',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: DocumentReportIcon,
-  },
-  {
-    name: 'Saved Replies',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ReplyIcon,
-  },
-  {
-    name: 'Email Commenting',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ChatAltIcon,
-  },
-  {
-    name: 'Connect with Customers',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: HeartIcon,
-  },
-]
 const metrics = [
   {
     id: 1,
@@ -150,7 +73,7 @@ export default function Home() {
                 <div>
                   <div>
                     <span className="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <InboxIcon
+                      <LightBulbIcon
                         className="h-6 w-6 text-white"
                         aria-hidden="true"
                       />
@@ -158,7 +81,7 @@ export default function Home() {
                   </div>
                   <div className="mt-6">
                     <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Get personalized estimates{' '}
+                      Get personalized estimates
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
                       RxGenius matches formulary information with your custom
@@ -169,12 +92,11 @@ export default function Home() {
                       Cigna.
                     </p>
                     <div className="mt-6">
-                      <a
-                        href="#"
-                        className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
-                      >
-                        Learn More
-                      </a>
+                      <Link href="/product">
+                        <a className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">
+                          Learn More
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -203,7 +125,7 @@ export default function Home() {
                 <div>
                   <div>
                     <span className="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <SparklesIcon
+                      <CheckIcon
                         className="h-6 w-6 text-white"
                         aria-hidden="true"
                       />
@@ -220,12 +142,11 @@ export default function Home() {
                       insurance plans.
                     </p>
                     <div className="mt-6">
-                      <a
-                        href="#"
-                        className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
-                      >
-                        Learn More
-                      </a>
+                      <Link href="/product">
+                        <a className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">
+                          Learn More
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -348,12 +269,12 @@ export default function Home() {
               </span> */}
             </h2>
             <div className="mt-6 space-y-4 sm:flex sm:space-y-0 sm:space-x-5">
-              <Link href="/contact" passHref>
+              <Link href="/product" passHref>
                 <a className="flex items-center justify-center rounded-md border border-transparent bg-indigo-50 px-4 py-3 text-base font-medium text-indigo-800 shadow-sm hover:bg-indigo-100">
                   Learn More
                 </a>
               </Link>
-              <Link href="/product" passHref>
+              <Link href="/contact" passHref>
                 <a className="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">
                   Request a Demo
                 </a>
