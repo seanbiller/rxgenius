@@ -8,7 +8,7 @@ const people = [
     role: 'CoFounder',
     imageUrl: KimiProfilePic,
     bio: 'Kimiya currently works part-time in a local pharmacy and attends the University of Texas at Austin pursuing a Bachelor of Science. She cofounded RxGenius as an effort to solve a number of problems she observed during her four years in the pharmacy.',
-    linkedinUrl: 'https://www.linkedin.com/in/seanbiller/',
+    linkedinUrl: 'https://www.linkedin.com/in/kimiya-monfared-804466132/',
   },
 
   {
@@ -16,7 +16,7 @@ const people = [
     role: 'CoFounder',
     imageUrl: SeanProfilePic,
     bio: `I love to make new and interesting solutions to problems that shouldn't exist. Healthcare shouldn't be this hard and the cost of your prescriptions shouldn't be a mystery. Kimiya and I created this company so can make an educated choice next time you choose your insurance or before you decide which medication is right for you.`,
-    linkedinUrl: 'https://www.linkedin.com/in/kimiya-monfared-804466132/',
+    linkedinUrl: 'https://www.linkedin.com/in/seanbiller/',
   },
 ]
 
